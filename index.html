@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info-btn">
+        <input id="info" type="text" placeholder="Wtie Something Here...">
+        <button onclick="add()">ADD</button>
+    </div>
+    <div id="display">
+        <ul id="list">
+            
+        </ul>
+    </div>
+
+
+    <script>
+        function add(){
+            var list=document.getElementById('list');
+            var info=document.getElementById('info').value;
+            var li=document.createElement('li');
+            var text=document.createTextNode(info);
+            li.appendChild(text);
+            if (info == '') {
+            alert("You must write something!");
+            } else {
+                list.appendChild(li);           
+             }
+             document.getElementById("info").value = "";  
+            var del=document.createElement('button');
+            
+            }
+
+    </script>
+</body>
+</html>
